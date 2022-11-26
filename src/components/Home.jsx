@@ -1,9 +1,11 @@
 import React from 'react'
 
-export function NavBar2() {
+export function Home() {
   return (
 <>    
 <br></br>
+<br></br>
+    
     <section className="bg-light">
             
             <div className="container px-3">

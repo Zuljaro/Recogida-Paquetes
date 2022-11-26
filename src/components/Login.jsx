@@ -31,15 +31,18 @@ export function Login() {
   return (
 <>
     <br></br>
+    <br></br>
+    
     <section className="bg-light">
         
             <div className="container px-4">
             <br></br>
-                <div className="row gx-4 align-items-center justify-content-center justify-content-lg-between">
-                    <div className="col-12 col-lg-5">
+                
+                    <div className="col-12 " >
                     <br />
                     <br />
                     <h1 >Bienvenido a InstaYa</h1>
+                    <div><img src="src/assets/img/usuario.png" width="40%" height="40%" /></div>
                     <br />
                     <form>
 
@@ -103,19 +106,21 @@ export function Login() {
                             >
                             </div> --> */}
                         <div className="p-1"  >
-                            <a className="small" href="#" 
+                            <a className="small" href="/Register" 
                             >No tengo una cuenta!</a>
                             <br />
                             <hr />
                         </div>
                     </div>
                     
-                </div>
+                
+
             </div>
 
-                      <div className="col-sm-8 col-md-6">
-                        <div><img src="src/assets/img/usuario.png" width="40%" height="40%" /></div>
-                      </div>
+                      
+
+
+
                 </div>
 
             </div>
