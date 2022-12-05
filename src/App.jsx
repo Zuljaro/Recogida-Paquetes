@@ -7,13 +7,11 @@ import { NavBar } from './components/NavBar'
 import { Home } from './components/Home'
 import { Login } from './components/Login'
 import { Register } from './components/Register'
-import { CrearSolicitud } from './components/CrearSolicitud'
 import { ListarSolicitud } from './components/ListarSolicitud'
-//import EdicionPaquete from './components/EdicionPaquete'
-//import {Book } from './components/book';
-//import {EdicionPaquete } from './components/EdicionPaquete';
-//import {NuevoPaquete} from './components/NuevoPaquete'
-//import {BookNew} from './components/book-new';
+import {NuevoPaquete} from './components/NuevoPaquete'
+//import {PaqueteHome } from './components/PaqueteHome'
+import { FormPaquete }  from './components/FormPaquete'
+
 
 
 
@@ -24,14 +22,19 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <NavBar/>
+
+     
           
       <Routes>
+      <Route path="/" element={<Home />} />
       <Route path="/Home" element={<Home />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Register" element={<Register />} />
-      <Route path="/CrearSolicitud" element={<CrearSolicitud />} />
+      <Route path="/NuevoPaquete" element={<NuevoPaquete />} />
       <Route path="/ListarSolicitud" element={<ListarSolicitud/>}/>
-     
+      <Route path="/FormPaquete" element={<FormPaquete/>}/>
+      
+      
       
       
   

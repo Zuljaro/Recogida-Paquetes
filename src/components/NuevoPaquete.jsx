@@ -1,14 +1,14 @@
 import { FormPaquete } from "./FormPaquete"
+import React from 'react'
 
-const NuevoPaquete = () => {
+export function NuevoPaquete ()  {
     return (
         <>
-            <h1>Este es un nuevo Paquete</h1>
-            <FormPaquete data={[]} />
-             
-          
+            <h2>Registrar Orden</h2>
+            <a class= "logo"><img src="src/assets/img/paquete.png" alt="Registro Usuario" height= "80" width="80"/></a>
+            <FormPaquete/>
+           
         </>
     )
 }
 
-export default NuevoPaquete

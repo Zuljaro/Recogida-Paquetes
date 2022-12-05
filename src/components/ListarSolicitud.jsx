@@ -1,38 +1,37 @@
-import { Link } from "react-router-dom"
+import { Link} from "react-router-dom"
+//import { useNavigate} from "react-router-dom"
+
 
 const paquetes = [
     {
         id: 1,
-        Paquete: 'Documentos',
-        Medida: '45X23',
-        Fecha: '2022-05-24',
-        ciudad: 'Bogota',
-        DirEntrega: 'Cra 23 No 36-54'
+        Fecha: '2022-10-12',
+        CiuOrigen: 'Pereira',
+        CiuDestino: 'Bogota',
+        Estado: 'Completado',
+        
     },
     {
         id: 2,
-        Paquete: 'Caja Decorativa',
-        Medida: '150X70',
-        Fecha: '2022-10-12',
-        ciudad:'Barranca',
-        DirEntrega: 'Calle 33 No 11-54'
+        Fecha: '2022-05-10',
+        CiuOrigen: 'Amazonas',
+        CiuDestino: 'Caqueta',
+        Estado: 'Guardado',
     },
     {
         id: 3,
-        Paquete: 'Mesa de Noche',
-        Medida: '80X30X25',
-        Fecha: '2022-06-10',
-        ciudad: 'Villavicencio',
-        DirEntrega: 'Transv 33 No 11-54'
+        Fecha: '2022-06-18',
+        CiuOrigen: 'Medellin',
+        CiuDestino: 'Tunja',
+        Estado: 'Cancelado',
     }]
 
 const labels = [
     "# Seguimiento",
-    "Paquete",
-    "Medida",
-    "Fecha de Envio",
-    "Ciudad",
-    "Dir Entrega",
+    "Fecha de Solicitud",
+    "Ciudad Origen",
+    "Ciudad Destino",
+    "Estado",
     "Action"
 ]
 export  function ListarSolicitud() {
@@ -40,8 +39,19 @@ export  function ListarSolicitud() {
 
     
     <>
+            <h2>Seguimiento de Envio</h2>
+            <a class= "logo"><img src="src/assets/img/listarpaq.png" alt="Registro Usuario" height= "80" width="80"/></a>
+            
+                <h5>Ingrese en este campo el numero de su solicitud</h5>
+                <input type="text" placeholder="Rastrear solicitud..." />
+                <button className="btn btn-primary ms-3">Buscar</button>
+            
+
+
+
             <div className="books-home">
-                <Link className="btn btn-primary books-home__create" to='/CrearSolicitud'>Create</Link>
+                
+                <Link className="btn btn-primary books-home__create" to='/NuevoPaquete'>Create</Link>
                 <table className="table">
                     <thead>
                         <tr>
@@ -55,16 +65,16 @@ export  function ListarSolicitud() {
                             return (
                                 <tr key={index}>
                                     <th scope="row">
-                                        <Link to={'/components/' + paquete.id}>{paquete.id}</Link>
+                                        <Link to={'/components/Paquete' + paquete.id}>{paquete.id}</Link>
                                     </th>
-                                    <td>{paquete.Paquete}</td>
-                                    <td>{paquete.Medida}</td>
                                     <td>{paquete.Fecha}</td>
-                                    <td>{paquete.ciudad}</td>
-                                    <td>{paquete.DirEntrega}</td>
+                                    <td>{paquete.CiuOrigen}</td>
+                                    <td>{paquete.CiuDestino}</td>
+                                    <td>{paquete.Estado}</td>
                                     <td className="d-flex gap-2 justify-content-center">
-                                        <Link className="btn btn-success" to={'/EdicionPaquete/' + paquete.id + '/edit'}>Edit</Link>
-                                        <Link className="btn btn-danger" to={'/books/' + paquete.id + '/delete'}>Delete</Link>
+                                        <Link className="btn btn-success" to={'/EdicionPaquete/' + paquete.id }>Edit</Link>
+                                      
+                                        
                                     </td>
                                 </tr>)
                         })}

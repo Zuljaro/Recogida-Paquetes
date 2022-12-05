@@ -26,16 +26,68 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.App {
+  text-align: center;
+  margin: 15px;
 }
 
+.navbar-nav {
+  flex-direction: row;
+  gap: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__item p {
+  color: red;
+  font-size: 12px;
+}
+
+.contenedor-imagen {
+  width: 300px;
+}
+
+.contenedor-imagen img {
+  width: 100%;
+}
+
+.contenedor-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.books-home__create {
+  float: right;
+  margin: 10px 0px;
+}
 .card {
   padding: 2em;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.form-group-row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
 }
